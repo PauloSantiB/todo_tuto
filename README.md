@@ -1,6 +1,6 @@
 # todo_tuto
 
-A new Flutter project.
+Esta aplicación de tareas pendientes tiene como objetivo ofrecer una experiencia práctica y funcional para gestionar tus pendientes. Su principal característica es el uso de blocs para almacenar el estado de las tareas, asegurando que los datos se mantengan incluso al cerrar la aplicación.
 
 ## Getting Started
 
