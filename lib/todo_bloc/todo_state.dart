@@ -1,6 +1,6 @@
 part of 'todo_bloc.dart';
 
-enum TodoStatus { initial, loading, succes, error }
+enum TodoStatus { initial, loading, success, error }
 
 
 class TodoState extends Equatable {

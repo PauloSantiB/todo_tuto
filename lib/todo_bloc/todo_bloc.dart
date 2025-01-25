@@ -2,7 +2,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 
-import 'package:todo_tuto/data/todo.dart';
+import '../data/todo.dart';
+
+//import 'package:todo_tuto/data/todo.dart';
 
 part 'todo_event.dart';
 part 'todo_state.dart';
@@ -18,13 +20,12 @@ class TodoBloc extends HydratedBloc<TodoEvent, TodoState> {
   void _onStarted(
     TodoStarted event,
     Emitter<TodoState> emit,
-
   ) {
-    if(state.status == TodoStatus.succes) return;
+    if(state.status == TodoStatus.success) return;
     emit(
       state.copyWith(
         todos: state.todos,
-        status: TodoStatus.succes
+        status: TodoStatus.success
       )
     );
   }
@@ -42,18 +43,18 @@ class TodoBloc extends HydratedBloc<TodoEvent, TodoState> {
     try {
       List<Todo> temp = [];
       temp.addAll(state.todos);
-      temp.insert(0,event.todo);
+      temp.insert(0, event.todo);
       emit(
         state.copyWith(
           todos: temp,
-          status: TodoStatus.succes
+          status: TodoStatus.success
         )
       );
        
     } catch (e) {
       emit(
         state.copyWith(
-          status:  TodoStatus.error
+          status: TodoStatus.error
         )
       );
     }
@@ -73,7 +74,7 @@ class TodoBloc extends HydratedBloc<TodoEvent, TodoState> {
       emit(
         state.copyWith(
           todos: state.todos,
-          status: TodoStatus.succes
+          status: TodoStatus.success
         )
       );
     } catch (e) {
@@ -99,7 +100,7 @@ class TodoBloc extends HydratedBloc<TodoEvent, TodoState> {
       emit(
         state.copyWith(
           todos: state.todos,
-          status: TodoStatus.succes
+          status: TodoStatus.success
         )
       );
     } catch (e) {

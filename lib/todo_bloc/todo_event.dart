@@ -1,10 +1,10 @@
 part of 'todo_bloc.dart';
 
 abstract class TodoEvent extends Equatable {
-  const TodoEvent();
+	const TodoEvent();
 
-  @override
-  List<Object> get props => [];
+	@override
+  List<Object?> get props => [];
 }
 
 class TodoStarted extends TodoEvent {}
